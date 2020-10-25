@@ -1,0 +1,89 @@
+:root {
+    --mauve: #776885;
+    --background: #C2BAC9;
+    --heading-bkg: #04030F;
+    --text: #EBE8ED;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--background);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header {
+    padding: 20px 35px;
+    height: 100px;
+    background-color: var(--mauve);
+    background-position: center;
+    background-attachment: fixed;
+    display: flex; 
+    justify-content: space-between;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999; 
+}
+header h1 {
+    background-color: var(--heading-bkg);
+    color: var(--text);
+    font-size: 36px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+}
+header nav {
+    margin: 7px 0;
+    text-decoration: none;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li a {
+    padding: 10px 15px;
+    font-size: 1.55vw;
+}
+header nav ul li a:hover {
+    background: var
+}
+header a {
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 5px solid var(--text);
+}
+footer {
+    background: var(--mauve);
+    width: 100%;
+    padding: 10px 7.5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0px;
+}
+footer h3 {
+    color: var(--text);
+    font-size: 30px;
+    margin: 0;
+}
+footer h4 {
+    color: var(--text);
+    font-size: 15px;
+    text-align: right;
+}
+footer h4::before {
+    content: "🖤";
+}
+section {
+    padding: 15px;
+}
+.hero {
+    background-image: url("../images/HERO.jpg")
+}
