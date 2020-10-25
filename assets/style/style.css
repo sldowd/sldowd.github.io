@@ -9,18 +9,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    position: relative;
+}
+.main-container {
+    min-height: 100vh; 
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+   }
 body {
     background-color: var(--background);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
 }
+/* header style */
 header {
-    padding: 20px 35px;
+    padding: 10px 10px 20px 0px;
     height: 100px;
     background-color: var(--mauve);
     background-position: center;
     background-attachment: fixed;
     display: flex; 
     justify-content: space-between;
+    align-items: flex-end;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -30,9 +44,11 @@ header h1 {
     background-color: var(--heading-bkg);
     color: var(--text);
     font-size: 36px;
+    font-weight: lighter;
     margin: 0;
     display: flex;
     justify-content: start;
+    padding: 5px 5px 5px 20px;
 }
 header nav {
     margin: 7px 0;
@@ -50,13 +66,16 @@ header nav ul li a {
     font-size: 1.55vw;
 }
 header nav ul li a:hover {
-    background: var
+    background: #3F3645;
+    border: 5px solid #3F3645;
 }
 header a {
     text-decoration: none;
     color: var(--text);
     border-bottom: 5px solid var(--text);
+    margin: 2px;
 }
+/* footer style */
 footer {
     background: var(--mauve);
     width: 100%;
@@ -84,6 +103,60 @@ footer h4::before {
 section {
     padding: 15px;
 }
+/* hero style */
 .hero {
-    background-image: url("../images/HERO.jpg")
+    background-image: url("../images/HERO.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 300px;
+    
+}
+.tag-line {
+    color: var(--background);
+    background: var(--heading-bkg);
+    font-size: 35px;
+    padding: 5px;
+}
+h2 {
+    font-size: 40px;
+    text-align: right;
+    color: var(--mauve);
+    border-right: 3px solid var(--mauve);
+    font-weight: lighter;
+    flex: 1 25%;
+    padding: 5px;
+}
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* about me section */
+.bio {
+    flex: 1 75%;
+    padding: 20px;
+    text-align: left;
+    color: var(--mauve)
+}
+/* work section */
+.work-grid-wrapper {
+    flex: 1 75%;
+}
+/* contact me section */
+.contact-flexbox {
+    display: flex;
+    flex: 0.5 75%;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: var(--mauve);
+    padding: 20px;
+}
+.contact-flexbox a {
+    text-decoration: none;
+    color: var(--mauve);
 }
