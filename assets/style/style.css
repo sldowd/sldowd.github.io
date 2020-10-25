@@ -5,12 +5,13 @@
     --text: #EBE8ED;
 }
 * {
-    margin: 0;
+    margin: 0;  
     padding: 0;
     box-sizing: border-box;
 }
 html, body {
     height: 100%;
+    width: 100%;
     position: relative;
 }
 .main-container {
@@ -145,22 +146,20 @@ h2 {
 /* work section */
 .work-grid-wrapper {
     flex: 1 75%;
-    display: flex;
     justify-content: flex-start;
     grid-auto-columns: minmax(30%, auto);
 }
 .work-grid-container {
     padding-left: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 45px);
     justify-items: stretch;
-    align-items: center;
+    align-items: stretch;
     grid-gap: 5px;
-    grid-auto-columns: minmax(30%, auto);
 }
 .work-grid-item {
-    padding: 4px;
+    padding: 0;
     border: 3px solid var(--heading-bkg);
     display: flex;
     justify-content: flex-start;
@@ -180,25 +179,29 @@ h2 {
 }
 .project1 {
     grid-column: 1/ span 2;
-    background-image: url();
+    grid-row: 1/ span 2;
+    background-image: url(../images/floppy.jpg);
+    background-size: auto;
 }
 .project2 {
     grid-row: -1/ span 1;
     background-image: url(../images/run-buddy.jpg);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    background-attachment: fixed;
 }
 .project3 {
     grid-column: 2/ span 1;
     grid-row: -1/ span 1;
+    background-image: url(../images/floppy.jpg);
 }
 .project4 {
-    grid-column: 3/ span 1
+    grid-column: 3/ span 1;
+    background-image: url(../images/floppy.jpg);
 }
 .project5 {
     grid-column: 3/ span 1;
     grid-row: 2/ span 1;
+    background-image: url(../images/floppy.jpg);
 }
 /* contact me section */
 .contact-flexbox {
@@ -215,7 +218,7 @@ h2 {
 .contact-flexbox a {
     text-decoration: none;
     color: var(--mauve);
-    padding: 0 10px:
+    padding: 0 10px;
 }
 /* media queries */
 @media screen and (max-width: 980px) {
