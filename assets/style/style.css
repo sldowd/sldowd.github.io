@@ -118,7 +118,7 @@ section {
 .tag-line {
     color: var(--background);
     background: var(--heading-bkg);
-    font-size: 35px;
+    font-size: 20px;
     padding: 5px;
 }
 h2 {
@@ -147,15 +147,17 @@ h2 {
     flex: 1 75%;
     display: flex;
     justify-content: flex-start;
-
+    grid-auto-columns: minmax(30%, auto);
 }
 .work-grid-container {
+    padding-left: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
+    justify-items: stretch;
     align-items: center;
     grid-gap: 5px;
+    grid-auto-columns: minmax(30%, auto);
 }
 .work-grid-item {
     padding: 4px;
@@ -201,6 +203,8 @@ h2 {
 /* contact me section */
 .contact-flexbox {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex: 0.5 75%;
     justify-content: space-around;
     align-items: center;
@@ -211,17 +215,19 @@ h2 {
 .contact-flexbox a {
     text-decoration: none;
     color: var(--mauve);
+    padding: 0 10px:
 }
 /* media queries */
 @media screen and (max-width: 980px) {
     header {
-        padding-bottom: 0;
-        justify-content: center;
+        padding-bottom: 10px;
+        justify-content: space-evenly;
         position: relative;
     }
     header h1 {
-        width: 100%;
-        text-align: center;
+        width: 20%;
+        font-size: 3vw;
+        text-align: left;
     }
     header nav ul {
         margin-top: 20px;
@@ -229,7 +235,7 @@ h2 {
         justify-content: center;
     }
     header nav ul li a {
-        font-size: 20px;
+        font-size: 1.5vw;
     }
     footer h2, footer div {
         text-align: center;
