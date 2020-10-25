@@ -145,6 +145,58 @@ h2 {
 /* work section */
 .work-grid-wrapper {
     flex: 1 75%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.work-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 5px;
+}
+.work-grid-item {
+    padding: 4px;
+    border: 3px solid var(--heading-bkg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0px 0px 10px 0px;
+}
+.project-name {
+    background-color: var(--heading-bkg);
+}
+.work-grid-item h3 {
+    color: var(--mauve);
+    font-size: 15px;
+}
+.work-grid-item h4 {
+    color: var(--mauve);
+    font-size: 5px;
+}
+.project1 {
+    grid-column: 1/ span 2;
+    background-image: url();
+}
+.project2 {
+    grid-row: -1/ span 1;
+    background-image: url(../images/run-buddy.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.project3 {
+    grid-column: 2/ span 1;
+    grid-row: -1/ span 1;
+}
+.project4 {
+    grid-column: 3/ span 1
+}
+.project5 {
+    grid-column: 3/ span 1;
+    grid-row: 2/ span 1;
 }
 /* contact me section */
 .contact-flexbox {
@@ -159,4 +211,34 @@ h2 {
 .contact-flexbox a {
     text-decoration: none;
     color: var(--mauve);
+}
+/* media queries */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    footer h2, footer div {
+        text-align: center;
+        width: 100%
+    }
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 575px) {
+
 }
